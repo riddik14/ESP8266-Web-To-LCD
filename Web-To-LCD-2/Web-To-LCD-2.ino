@@ -43,11 +43,11 @@
 #include <EEPROM.h>
 
 // LiquidCrystal lcd(13, 12, 5, 4, 2, 14); // V1
-LiquidCrystal lcd(13, 12, 14, 5, 4, 2); //V2
-
+//LiquidCrystal lcd(13, 12, 14, 5, 4, 2); //V2
+LiquidCrystal lcd(0x3f); //V2
 ESP8266WebServer server(80);
 ESP8266HTTPUpdateServer httpUpdater;
-IPAddress apIP(192, 168, 0, 1);
+IPAddress apIP(192, 168, 1, 1);
 IPAddress netMsk(255, 255, 255, 0);
 
 bool debug = true;
